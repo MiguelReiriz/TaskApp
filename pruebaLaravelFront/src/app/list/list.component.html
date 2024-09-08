@@ -1,0 +1,26 @@
+<p>LISTA DE TASKS</p>
+
+<h2>Tasks List</h2>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Expiration date</th>
+      <th>State</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.title }}</td>
+      <td>{{ task.description }}</td>
+      <td>{{ task.expiration_date | date }}</td>
+      <td>{{ task.state }}</td>
+      <td>
+        <button (click)="editTask(task.id)">Edit</button>
+        <button (click)="deleteTask(task.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,23 @@
+<form [formGroup]="taskForm" (ngSubmit)="saveTask()">
+    <div>
+      <label for="title">Title:</label>
+      <input id="title" formControlName="title">
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <input id="description" formControlName="description">
+    </div>
+    <div>
+      <label for="expiration_date">Expiration Date:</label>
+      <input id="expiration_date" type="date" formControlName="expiration_date">
+    </div>
+    <div>
+      <label for="state">State:</label>
+      <select id="state" formControlName="state">
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+    <button type="submit">Save</button>
+  </form>
+  
